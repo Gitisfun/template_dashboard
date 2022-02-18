@@ -7,7 +7,6 @@ const menuList = [
       link: "/",
       isActive: false,
     },
-    
+
   ];
-  
   export default menuList;
