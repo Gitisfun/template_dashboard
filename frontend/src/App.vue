@@ -100,6 +100,7 @@ body {
   --mytooltipcolor: white;
   --myhovercolor: white;
   --myhovercolortext: white;
+  
 }
 ::selection {
   color: var(--mytextcolor);

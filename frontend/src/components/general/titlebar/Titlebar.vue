@@ -39,18 +39,14 @@ export default {
     padding-top: 15px;
     padding-bottom: 15px;
     padding-right: 25px;
-    /*
-    -webkit-box-shadow:0px 0.5px 0.5px #c7ecee;
-    -moz-box-shadow:0px 0.5px 0.5px #c7ecee;
-    box-shadow:0px 0.5px 0.5px #c7ecee;
-    */
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 #dash-titlebar-icon {
-
+  color: black
 }
 #dash-titlebar-title {
     flex-grow: 4;
+    color: black;
     text-align: left;
     font-size: 20px;
     font-weight: 700;
