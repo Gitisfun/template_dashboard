@@ -10,13 +10,13 @@
     </div>
     <ul class="nav_list">
       <MenuItem @itemClicked="itemClicked" v-for="item in menuItems" :title="item.name" :icon="item.icon" :link="item.link" :key="item.id" />
-      <div class="logout-out-box">
-      <li  @click="logout">
-        <router-link active-class="router-link-active" to="login">
-           <i :class="`bx bx-log-out`"></i> <span class="links_name">Uitloggen</span>
-        </router-link>
+      <li id="log-out-box" @click="logout">
+        <div class="logout-out-box">
+          <router-link active-class="router-link-active" to="login">
+            <i :class="`bx bx-log-out`"></i> <span class="links_name">Uitloggen</span>
+          </router-link>
+        </div>
       </li>
-      </div>
     </ul>
   </div>
 </template>
@@ -111,11 +111,18 @@ export default {
 #btn {
   cursor: pointer;
 }
+
 .logout-out-box {
   position: fixed;
-  bottom: 0;
-  width: 210px;
-  margin-bottom: 5px;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: 15px;
+  padding: 10px 14px;
+  transition: all 0.5s ease;
+  overflow: hidden;
 }
-
+.sidebar.active .logout-out-box{
+  width: 240px;
+}
 </style>

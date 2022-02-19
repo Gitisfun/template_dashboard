@@ -27,6 +27,7 @@ export default {
   },
   computed: {
     isLogin(){
+      if(this.$route.name === "Login") return true
       return false
     }
   }
@@ -193,34 +194,7 @@ body {
   opacity: 1;
   top: 50%;
 }
-.sidebar ul li input {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  border-radius: 12px;
-  outline: none;
-  border: none;
-  background: var(--mysidebarcolor);
-  padding-left: 50px;
-  font-size: 18px;
-  color: var(--mytextcolor);
-}
-.sidebar ul li .bx-search {
-  position: absolute;
-  z-index: 99; 
-  color: var(--mytextcolor);
-  font-size: 22px;
-  transition: all 0.5 ease;
-}
-.sidebar ul li .bx-search:hover {
-  /*
-  background: var(--myhovercolor);
-  color: var(--myhovercolortext);
-  */
-  color: black;
-}
+
 .sidebar ul li a {
   color: var(--mytextcolor);
   display: flex;
@@ -232,8 +206,6 @@ body {
 }
 .sidebar ul li a:hover {
   background: linear-gradient(45deg,#dff9fb, #81ecec, #c7ecee, #c7ecee);
-  background: white;
-  background: linear-gradient(45deg,white, lightblue, white, lightblue);
   color: black;
   background-size: 400% 400%;
 	animation: gradient 5s ease infinite;
@@ -260,78 +232,8 @@ body {
   opacity: 1;
   pointer-events: auto;
 }
-.sidebar .profile_content {
-  position: absolute;
-  color: var(--mytextcolor);
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-.sidebar .profile_content .profile {
-  position: relative;
-  padding: 10px 6px;
-  height: 60px;
-  background: none;
-  transition: all 0.4s ease;
-}
-.sidebar.active .profile_content .profile {
-  background: #1d1b31;
-}
-.profile_content .profile .profile_details {
-  display: flex;
-  align-items: center;
-  opacity: 0;
-  pointer-events: none;
-  white-space: nowrap;
-  transition: all 0.4s ease;
-}
-.sidebar.active ~ .profile .profile_details {
-  opacity: 1;
-  pointer-events: auto;
-}
-.profile .profile_details img {
-  height: 45px;
-  width: 45px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-.profile .profile_details .name_job {
-  margin-left: 10px;
-}
-.profile .profile_details .name {
-  font-size: 15px;
-  font-weight: 400;
-}
-.profile .profile_details .job {
-  font-size: 12px;
-}
-.profile #log_out {
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  min-width: 50px;
-  line-height: 50px;
-  font-size: 20px;
-  border-radius: 12px;
-  text-align: center;
-  transition: all 0.4s ease;
-  background: var(--mysidebarcolor);
-}
-.sidebar.active .profile #log_out {
-  left: 88%;
-}
-.sidebar.active .profile #log_out {
-  background: none;
-}
 .sidebar.active ~ .home_content {
   z-index: 100;
-}
-.home_content .text {
-  font-size: 25px;
-  font-weight: 500;
-  color: var(--mysidebarcolor);
-  margin: 12px;
 }
 .sidebar.active ~ .home_content {
   width: calc(100% - 240px);
