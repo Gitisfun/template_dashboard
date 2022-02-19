@@ -8,4 +8,5 @@ const menuList = [
       isActive: false,
     },
   ];
+  
   export default menuList;
