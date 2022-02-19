@@ -6,6 +6,10 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
+    meta: {
+      group: "Home",
+      requiresAuth: true,
+    },
   },
 ]
 
